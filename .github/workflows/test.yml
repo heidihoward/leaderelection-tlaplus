@@ -13,12 +13,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: TLA+ Tools
+      - name: Install TLA+ Tools
         run: |
           git clone https://github.com/pmer/tla-bin.git
           cd tla-bin
           ./download_or_update_tla.sh
           sudo ./install.sh
           cd ..
-          sany RaftLeader.tla
-          tlc RaftLeader.tla
+      - name: Sany
+        run: sany RaftLeader.tla
+      - name: TLC
+        run: tlc RaftLeader.tla
