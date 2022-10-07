@@ -32,4 +32,5 @@ jobs:
           cd tla-bin
           ./download_or_update_tla.sh
           sudo ./install.sh
+          cd ..; pwd
           tlc RaftLeader.tla
