@@ -29,5 +29,5 @@ jobs:
           sudo apt install default-jre
           wget https://github.com/informalsystems/apalache/releases/download/v0.29.2/apalache.tgz
           tar zxvf apalache.tgz
-          ./apalache/bin/apalache-mc check --init=Init --inv=Inv --length=0 RaftLeader.tla
-          ./apalache/bin/apalache-mc check --init=Inv --inv=Inv --length=1 RaftLeader.tla
+          ./apalache/bin/apalache-mc check --init=Init --inv=Inv --length=0 --features=no-rows RaftLeader.tla
+          ./apalache/bin/apalache-mc check --init=Inv --inv=Inv --length=1 --features=no-rows RaftLeader.tla
