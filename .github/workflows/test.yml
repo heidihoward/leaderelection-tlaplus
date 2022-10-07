@@ -13,7 +13,6 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-
       - name: TLC
         run: |
           git clone https://github.com/pmer/tla-bin.git
